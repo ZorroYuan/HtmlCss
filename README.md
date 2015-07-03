@@ -1,8 +1,4 @@
-# HtmlCss
+# JS Basic
 A Demo For HTML/CSS
 
-Basic CSS usage
-
-Advanced CSS Usage
-
-Animation CSS
+"with" expression.
