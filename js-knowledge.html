@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Knowledge</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>	
+	li{
+		cursor: pointer;
+	}
+	</style>
+	<script>
+	function withFun(){
+		var zorro = {
+			name: 'zorro',
+			birthday: '1991-10-08'
+		}
+		alert('name: ' + zorro.name);
+		alert('birthday' + zorro.birthday);
+		with(zorro){
+			alert('name: ' + name);
+			alert('birthday: ' + birthday);
+		}
+	}
+	</script>
+</head>
+<body ng-app>
+	<h1>Hello {{name}}!</h1>
+	<input type="text" ng-model="name" />
+	<ul>
+		<li ng-click="first=!first">1. with </li>
+		<li ng-click="second=!second">2. Create Object</li>
+		<li ng-click="third=!third">3. Date, String, Array</li>
+		<li ng-click="forth=!forth">4. Extend Object</li>
+		<li></li>
+	</ul>
+	<div ng-show="first">
+		<textarea style="width: 500px; height: 200px;">
+			function withFun(){
+				var zorro = {
+					name: 'zorro',
+					birthday: '1991-10-08'
+				}
+				alert('name: ' + zorro.name);
+				alert('birthday' + zorro.birthday);
+				with(zorro){
+					alert('name: ' + name);
+					alert('birthday' + birthday);
+				}
+			}
+		</textarea>
+		<div class="btn btn-default" onclick="withFun()">Run</div>
+	</div>
+	<div ng-show="second">
+		<textarea style="width: 500px; height: 200px;">
+			function Person(name){
+				this.name = name;
+			}
+			var zorro = new Person('zorro');
+
+		</textarea>
+
+	</div>
+	<div ng-show="third">
+		<textarea style="width: 500px; height: 200px;">
+			
+		</textarea>
+	</div>
+</body>
+</html>
