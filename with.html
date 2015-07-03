@@ -4,13 +4,23 @@
 	<meta charset="UTF-8">
 	<title>with</title>
 	<script>
+	function withFun(){
+		var zorro = {
+			name: 'zorro',
+			birthday: '1991-10-08'
+		}
 
+		with(zorro){
+			console.log('name: ' + name);
+			console.log('birthday' + birthday);
+		}
+	}
 	</script>
 </head>
 <body>
 	<ul>
-		<li></li>
-		<li></li>
+		<li onclick="withFun()">1. with </li>
+		<li>2. </li>
 		<li></li>
 		<li></li>
 		<li></li>
