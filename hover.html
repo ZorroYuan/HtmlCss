@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML 5</title>
+
+	<style>
+	li{
+		list-style-type: none;
+	}
+
+	ul.nav{
+		padding: 0;
+		display: inline-block;	
+		border: 1px solid #FAA;
+		border-radius: 10px;
+		font-size: 14px;
+		overflow: hidden;
+		max-height: 20px;
+	}
+	ul.nav > li{
+		text-align: center;
+		padding: 3px 5px;
+		display: none;
+		width: 140px;
+		height: 14px;
+		border-left: 1px solid #FAA;
+	}
+	ul.nav:hover{
+		animation-name: expand-nav;
+    	animation-duration: 2s;
+	}
+
+
+	ul.nav:hover > li{
+		display: inline-block;
+	}
+	ul.nav > li:first-child{
+		display: inline-block;
+		border-left: 0;
+	}
+
+	@keyframes expand-nav{
+		0%		{width: 152px;}
+		100%	{width: 615px;}
+	}
+
+
+	.sub-nav > ul{
+		position: absolute;
+		display: none;
+		padding: 0px;
+		border: 1px solid #FAA;
+		margin-left: -6px;
+  		margin-top: 3px;
+  		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		overflow: hidden;
+	}
+	.sub-nav > ul > li{
+		top: 5px;
+		left: 0px;
+		width: 144px;
+		height: 14px;
+		padding: 3px 5px;
+		border-bottom: 1px solid #FAA;
+	}
+	.sub-nav:hover > ul {
+		display: block;
+		animation-name: expand-sub-nav;
+    	animation-duration: 2s;
+	}
+	.sub-nav > ul > li:last-child{
+		border-bottom: 0px;
+	}
+	@keyframes expand-sub-nav{
+		0%		{height: 0px;}
+		100%	{height: 63px;}
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<ul class="nav">
+		<li>We Have 3 Group</li>
+		<li>Merit</li>
+		<li class="sub-nav">
+		What If
+		<ul>
+			<li>Wang, Victor</li>
+			<li>Yuan, Zorro</li>
+			<li>Chen, Larry</li>
+		</ul>
+		</li>
+		<li>Model</li>
+	</ul>
+
+</body>
+</html>
